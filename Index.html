@@ -1,255 +1,305 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <title>Ashutosh Shukla | Product Owner</title>
 
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+<link rel="stylesheet"
+href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <style>
 
 body{
-font-family: 'Segoe UI', sans-serif;
-line-height:1.6;
+font-family:'Segoe UI',sans-serif;
+margin:0;
 }
 
-.hero{
-background:#0f172a;
+/* NAVBAR */
+
+.navbar{
+background:#000000cc;
+}
+
+/* VIDEO HERO */
+
+.video-container{
+position:relative;
+height:100vh;
+overflow:hidden;
+}
+
+.video-container video{
+position:absolute;
+top:0;
+left:0;
+min-width:100%;
+min-height:100%;
+object-fit:cover;
+z-index:-1;
+}
+
+.hero-content{
+height:100vh;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
 color:white;
-padding:120px 0;
+background:rgba(0,0,0,0.5);
 }
 
-.section{
+/* BADGES */
+
+.badges img{
+margin:5px;
+}
+
+/* PORTFOLIO */
+
+.portfolio{
 padding:80px 0;
 }
 
-.card{
-border:none;
-box-shadow:0 10px 20px rgba(0,0,0,0.08);
+.project-card{
+position:relative;
+overflow:hidden;
 }
 
-.timeline{
-border-left:3px solid #0d6efd;
-padding-left:30px;
+.project-card img{
+width:100%;
+height:220px;
+object-fit:cover;
 }
 
-.timeline-item{
-margin-bottom:40px;
-}
-
-.skills span{
-display:inline-block;
-background:#eef2ff;
-padding:8px 14px;
-margin:6px;
-border-radius:6px;
-font-size:14px;
-}
-
-footer{
-background:#0f172a;
+.project-overlay{
+position:absolute;
+top:0;
+left:0;
+right:0;
+bottom:0;
+background:rgba(0,0,0,0.7);
+display:flex;
+align-items:center;
+justify-content:center;
+opacity:0;
+transition:0.4s;
 color:white;
-padding:40px 0;
-text-align:center;
+font-size:18px;
+}
+
+.project-card:hover .project-overlay{
+opacity:1;
 }
 
 </style>
+
 </head>
+
 
 <body>
 
 <!-- NAVBAR -->
 
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
 
 <div class="container">
 
 <a class="navbar-brand" href="#">Ashutosh Shukla</a>
 
-<button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#nav">
+<button class="navbar-toggler" data-bs-toggle="collapse"
+data-bs-target="#nav">
+
 <span class="navbar-toggler-icon"></span>
+
 </button>
 
 <div class="collapse navbar-collapse" id="nav">
 
 <ul class="navbar-nav ms-auto">
 
-<li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-<li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
-<li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
-<li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
+<li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+
+<li class="nav-item"><a class="nav-link" href="#portfolio">Projects</a></li>
+
 <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
 
 </ul>
 
 </div>
 </div>
+
 </nav>
 
 
-<!-- HERO -->
+<!-- HERO SECTION -->
 
-<section class="hero text-center">
+<section id="home" class="video-container">
+
+<video autoplay muted loop>
+
+<source src="Video/V1.mp4" type="video/mp4">
+
+</video>
+
+<div class="hero-content">
 
 <div class="container">
 
-<img src="profile.jpg" class="rounded-circle mb-4" width="160">
+<img src="Images/Ash.jpg"
+class="rounded-circle mb-3"
+width="220">
 
 <h1>Ashutosh Shukla</h1>
 
-<h4 class="mb-4">
+<h5>
 Product Owner | Product Manager | Senior Business Analyst
-</h4>
+</h5>
 
 <p>
-Driving banking innovation through data, compliance and Agile delivery
+Driving Banking Innovation through Data, Compliance & Agile Delivery
 </p>
 
-<a href="Ashutosh_Shukla_Resume.pdf" class="btn btn-primary m-2">Download Resume</a>
+<!-- BADGES -->
 
-<a href="https://linkedin.com/in/ashutosh302" class="btn btn-outline-light m-2">
-LinkedIn
+<div class="badges">
+
+<a href="https://www.credly.com/badges/ca4a5225-ada5-4551-9f6f-5c6824e0f81a">
+
+<img src="PSPO Badge.png" width="90">
+
+</a>
+
+<a href="https://www.youracclaim.com/badges/d19e0be1-7578-49ad-80e3-48b6af552bd6">
+
+<img src="Azure.png" width="90">
+
 </a>
 
 </div>
 
+<br>
+
+<a href="Ashutosh Shukla PO Resume.pdf"
+class="btn btn-primary">
+
+Download Resume
+
+</a>
+
+</div>
+
+</div>
+
 </section>
 
 
-<!-- ABOUT -->
 
-<section id="about" class="section">
+<!-- PORTFOLIO -->
+
+<section id="portfolio" class="portfolio">
 
 <div class="container">
 
-<div class="row">
+<h2 class="text-center mb-5">Projects</h2>
 
-<div class="col-md-6">
+<div class="row g-4">
 
-<h2>About Me</h2>
 
-<p>
+<!-- PROJECT -->
 
-Professional Scrum Product Owner (PSPO I) certified Business Analyst with strong
-experience delivering value in banking and finance.
+<div class="col-md-3">
 
-Specializing in:
+<a href="https://github.com/Ashutosh07/Deep-Neural-Network">
 
-</p>
+<div class="project-card">
 
-<ul>
+<img src="Images/dnn.jpeg">
 
-<li>Product backlog ownership</li>
-<li>KYC / AML compliance solutions</li>
-<li>Agile product delivery</li>
-<li>Data analytics driven decision making</li>
-<li>Stakeholder engagement and roadmap planning</li>
+<div class="project-overlay">
 
-</ul>
-
-</div>
-
-<div class="col-md-6">
-
-<h2>Impact Highlights</h2>
-
-<ul>
-
-<li>Reduced operational costs by <b>30%</b> through centralized product offboarding.</li>
-
-<li>Delivered regulatory compliance solutions aligned with ASIC & APRA.</li>
-
-<li>Led cross-functional Agile squads in banking technology.</li>
-
-<li>Built predictive analytics models for enterprise decision making.</li>
-
-</ul>
+Deep Neural Network
 
 </div>
 
 </div>
 
-</div>
-
-</section>
-
-
-<!-- EXPERIENCE -->
-
-<section id="experience" class="section bg-light">
-
-<div class="container">
-
-<h2 class="text-center mb-5">Professional Experience</h2>
-
-<div class="timeline">
-
-<div class="timeline-item">
-
-<h5>ANZ Banking Group</h5>
-
-<b>Business & Process Analyst – Product Owner Proxy</b>
-
-<p>2024 – Present</p>
-
-<ul>
-
-<li>Owned and prioritized product backlog across compliance initiatives.</li>
-
-<li>Delivered KYC / AML regulatory solutions.</li>
-
-<li>Led squad delivery of centralized product offboarding capability.</li>
-
-<li>Reduced operational costs by 30%.</li>
-
-</ul>
+</a>
 
 </div>
 
 
-<div class="timeline-item">
 
-<h5>ANZ Banking Group</h5>
+<div class="col-md-3">
 
-<b>Process & Change Specialist</b>
+<a href="https://github.com/Ashutosh07/Great-Barrier-Reef-Categorical-data-analysis">
 
-<p>2023 – 2024</p>
+<div class="project-card">
 
-<ul>
+<img src="Images/2.jpg">
 
-<li>Led financial control automation initiatives.</li>
+<div class="project-overlay">
 
-<li>Improved statutory reporting processes.</li>
+Categorical Data Analysis
 
-<li>Collaborated with finance data teams to automate workflows.</li>
+</div>
 
-</ul>
+</div>
+
+</a>
 
 </div>
 
 
-<div class="timeline-item">
 
-<h5>Deloitte Australia</h5>
+<div class="col-md-3">
 
-<b>Consultant – Data Scientist (Client: Coles)</b>
+<a href="https://github.com/Ashutosh07/Real-World-Stock-Market-Prediction-">
 
-<p>2022 – 2023</p>
+<div class="project-card">
 
-<ul>
+<img src="Images/7.jpg">
 
-<li>Built predictive models and analytics solutions.</li>
+<div class="project-overlay">
 
-<li>Developed dashboards for executive decision making.</li>
-
-<li>Enabled ML adoption within product strategy.</li>
-
-</ul>
+Stock Market Prediction
 
 </div>
+
+</div>
+
+</a>
+
+</div>
+
+
+
+<div class="col-md-3">
+
+<a href="https://github.com/Ashutosh07/Bank-Marketing-Data-Analytics">
+
+<div class="project-card">
+
+<img src="Images/8.webp">
+
+<div class="project-overlay">
+
+Bank Marketing Analytics
+
+</div>
+
+</div>
+
+</a>
+
+</div>
+
 
 </div>
 
@@ -257,90 +307,11 @@ Specializing in:
 
 </section>
 
-
-<!-- SKILLS -->
-
-<section id="skills" class="section">
-
-<div class="container">
-
-<h2 class="text-center mb-5">Skills</h2>
-
-<div class="skills text-center">
-
-<span>Product Ownership</span>
-<span>Agile / Scrum</span>
-<span>Jira</span>
-<span>Confluence</span>
-<span>Stakeholder Management</span>
-<span>KYC / AML Compliance</span>
-<span>SQL</span>
-<span>Python</span>
-<span>Data Analytics</span>
-<span>Tableau</span>
-<span>Machine Learning</span>
-<span>Azure</span>
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- EDUCATION -->
-
-<section id="education" class="section bg-light">
-
-<div class="container">
-
-<h2 class="text-center mb-5">Education</h2>
-
-<div class="row">
-
-<div class="col-md-6">
-
-<div class="card p-4">
-
-<h5>Master of Information Technology</h5>
-
-<p>Deakin University</p>
-
-<p>Major: Data Analytics</p>
-
-<p>Graduated with High Distinction</p>
-
-</div>
-
-</div>
-
-
-<div class="col-md-6">
-
-<div class="card p-4">
-
-<h5>Bachelor of Engineering</h5>
-
-<p>Computer Engineering</p>
-
-<p>Gujarat Technology University</p>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
 
 
 <!-- CONTACT -->
 
-<section id="contact" class="section">
-
-<div class="container text-center">
+<section id="contact" class="text-center p-5">
 
 <h2>Contact</h2>
 
@@ -357,24 +328,13 @@ shukla.ashutosh302@gmail.com
 
 </p>
 
-<p>
-
 <a href="https://linkedin.com/in/ashutosh302">
+
 <i class="fab fa-linkedin fa-2x"></i>
+
 </a>
 
-</p>
-
-</div>
-
 </section>
-
-
-<footer>
-
-<p>© 2026 Ashutosh Shukla</p>
-
-</footer>
 
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
