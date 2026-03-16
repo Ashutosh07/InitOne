@@ -19,7 +19,6 @@ scroll-behavior:smooth;
 
 body{
 font-family:'Segoe UI', sans-serif;
-line-height:1.6;
 margin:0;
 }
 
@@ -57,7 +56,7 @@ text-align:center;
 color:white;
 }
 
-/* SECTION VIDEO BACKGROUND */
+/* SECTION VIDEO */
 
 .section-video{
 position:relative;
@@ -72,10 +71,10 @@ left:0;
 width:100%;
 height:100%;
 object-fit:cover;
-z-index:-2;
+z-index:0;
 }
 
-.section-video::before{
+.section-video::after{
 content:"";
 position:absolute;
 top:0;
@@ -83,7 +82,7 @@ left:0;
 width:100%;
 height:100%;
 background:rgba(0,0,0,0.55);
-z-index:-1;
+z-index:1;
 }
 
 .section-video .container{
@@ -92,7 +91,13 @@ z-index:2;
 color:white;
 }
 
-/* PROFILE IMAGE */
+/* SECTION SPACING */
+
+.section{
+padding:100px 0;
+}
+
+/* PROFILE */
 
 .profile-img{
 width:200px;
@@ -106,12 +111,6 @@ border:4px solid white;
 
 .badges img{
 margin:8px;
-}
-
-/* SECTION SPACING */
-
-.section{
-padding:100px 0;
 }
 
 /* TIMELINE */
@@ -130,11 +129,10 @@ margin-bottom:40px;
 .skills span{
 display:inline-block;
 background:#eef2ff;
+color:#111;
 padding:8px 14px;
 margin:6px;
 border-radius:6px;
-font-size:14px;
-color:#111;
 }
 
 /* PROJECT CARDS */
@@ -163,7 +161,6 @@ height:100%;
 display:flex;
 align-items:center;
 justify-content:center;
-text-align:center;
 color:white;
 font-weight:600;
 font-size:18px;
@@ -180,10 +177,9 @@ height:100%;
 display:flex;
 align-items:center;
 justify-content:center;
-text-align:center;
 color:white;
 font-weight:600;
-font-size:17px;
+font-size:16px;
 background:rgba(0,0,0,0.65);
 opacity:0;
 transition:opacity 0.4s ease;
@@ -341,6 +337,7 @@ Professional Scrum Product Owner certified Business Analyst with strong experien
 <div class="timeline">
 
 <div class="timeline-item">
+
 <h5>ANZ Banking Group</h5>
 <b>Business & Process Analyst</b>
 <p>2024 – Present</p>
@@ -350,9 +347,11 @@ Professional Scrum Product Owner certified Business Analyst with strong experien
 <li>Delivered centralized product offboarding capability</li>
 <li>Reduced operational cost by 30%</li>
 </ul>
+
 </div>
 
 <div class="timeline-item">
+
 <h5>ANZ Banking Group</h5>
 <b>Process & Change Specialist</b>
 <p>2023 – 2024</p>
@@ -361,9 +360,11 @@ Professional Scrum Product Owner certified Business Analyst with strong experien
 <li>Improved statutory reporting and automation</li>
 <li>Led finance process improvements</li>
 </ul>
+
 </div>
 
 <div class="timeline-item">
+
 <h5>Deloitte Australia</h5>
 <b>Consultant – Data Scientist</b>
 <p>2022 – 2023</p>
@@ -372,6 +373,7 @@ Professional Scrum Product Owner certified Business Analyst with strong experien
 <li>Built predictive analytics models</li>
 <li>Developed executive dashboards</li>
 </ul>
+
 </div>
 
 </div>
@@ -589,7 +591,9 @@ Click to explore source code
 
 
 <footer>
+
 <p>© 2026 Ashutosh Shukla</p>
+
 </footer>
 
 
