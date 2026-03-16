@@ -8,13 +8,14 @@
 
 <title>Ashutosh Shukla | Product Owner</title>
 
-<link rel="stylesheet"
-href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
-
-<link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <style>
+
+html{
+scroll-behavior:smooth;
+}
 
 body{
 font-family:'Segoe UI', sans-serif;
@@ -24,11 +25,44 @@ margin:0;
 
 /* NAVBAR */
 
+.navbar{
+background:rgba(0,0,0,0.85);
+}
+
+/* HERO VIDEO */
+
+.video-container{
+position:relative;
+height:100vh;
+overflow:hidden;
+}
+
+.video-container video{
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:100%;
+object-fit:cover;
+z-index:-2;
+}
+
+.hero-overlay{
+background:rgba(0,0,0,0.6);
+height:100vh;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+color:white;
+}
+
 /* SECTION VIDEO BACKGROUND */
 
 .section-video{
 position:relative;
 overflow:hidden;
+min-height:500px;
 }
 
 .section-video video{
@@ -38,7 +72,7 @@ left:0;
 width:100%;
 height:100%;
 object-fit:cover;
-z-index:-1;
+z-index:-2;
 }
 
 .section-video::before{
@@ -55,38 +89,6 @@ z-index:-1;
 .section-video .container{
 position:relative;
 z-index:2;
-color:white;
-}
-    
-.navbar{
-background:rgba(0,0,0,0.85);
-}
-
-/* VIDEO HERO */
-
-.video-container{
-position:relative;
-height:100vh;
-overflow:hidden;
-}
-
-.video-container video{
-position:absolute;
-top:0;
-left:0;
-min-width:100%;
-min-height:100%;
-object-fit:cover;
-z-index:-1;
-}
-
-.hero-overlay{
-background:rgba(0,0,0,0.6);
-height:100vh;
-display:flex;
-align-items:center;
-justify-content:center;
-text-align:center;
 color:white;
 }
 
@@ -109,7 +111,7 @@ margin:8px;
 /* SECTION SPACING */
 
 .section{
-padding:80px 0;
+padding:100px 0;
 }
 
 /* TIMELINE */
@@ -132,83 +134,79 @@ padding:8px 14px;
 margin:6px;
 border-radius:6px;
 font-size:14px;
+color:#111;
 }
 
-/* PROJECTS */
+/* PROJECT CARDS */
 
-/* PROJECT CARD */
 .project-card{
-    position:relative;
-    overflow:hidden;
-    border-radius:14px;
-    cursor:pointer;
-    transition:transform 0.5s ease, box-shadow 0.5s ease;
+position:relative;
+overflow:hidden;
+border-radius:14px;
+cursor:pointer;
+transition:transform 0.5s ease, box-shadow 0.5s ease;
 }
 
-/* IMAGE */
 .project-card img{
-    width:100%;
-    height:220px;
-    object-fit:cover;
-    transition:transform 0.7s cubic-bezier(0.22,1,0.36,1);
+width:100%;
+height:220px;
+object-fit:cover;
+transition:transform 0.7s cubic-bezier(0.22,1,0.36,1);
 }
 
-/* DEFAULT OVERLAY */
 .project-overlay{
-    position:absolute;
-    top:0;
-    left:0;
-    width:100%;
-    height:100%;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    text-align:center;
-    color:white;
-    font-weight:600;
-    font-size:18px;
-    background:rgba(0,0,0,0.45);
-    transition:opacity 0.4s ease;
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:100%;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+color:white;
+font-weight:600;
+font-size:18px;
+background:rgba(0,0,0,0.45);
+transition:opacity 0.4s ease;
 }
 
-/* HOVER TEXT */
 .project-hover-text{
-    position:absolute;
-    top:0;
-    left:0;
-    width:100%;
-    height:100%;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    text-align:center;
-    color:white;
-    font-weight:600;
-    font-size:17px;
-    background:rgba(0,0,0,0.65);
-    opacity:0;
-    transition:opacity 0.4s ease;
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:100%;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+color:white;
+font-weight:600;
+font-size:17px;
+background:rgba(0,0,0,0.65);
+opacity:0;
+transition:opacity 0.4s ease;
 }
 
-/* IMAGE ZOOM */
 .project-card:hover img{
-    transform:scale(1.18);
+transform:scale(1.18);
 }
 
-/* CARD LIFT */
 .project-card:hover{
-    transform:translateY(-8px);
-    box-shadow:0 18px 40px rgba(0,0,0,0.25);
+transform:translateY(-8px);
+box-shadow:0 18px 40px rgba(0,0,0,0.25);
 }
 
-/* TEXT SWITCH */
 .project-card:hover .project-overlay{
-    opacity:0;
+opacity:0;
 }
 
 .project-card:hover .project-hover-text{
-    opacity:1;
+opacity:1;
 }
+
+/* FOOTER */
 
 footer{
 background:#0f172a;
@@ -232,11 +230,8 @@ text-align:center;
 
 <a class="navbar-brand" href="#">Ashutosh Shukla</a>
 
-<button class="navbar-toggler" data-bs-toggle="collapse"
-data-bs-target="#nav">
-
+<button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#nav">
 <span class="navbar-toggler-icon"></span>
-
 </button>
 
 <div class="collapse navbar-collapse" id="nav">
@@ -247,7 +242,6 @@ data-bs-target="#nav">
 <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
 <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
 <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
-<!--<li class="nav-item"><a class="nav-link" href="#education">Education</a></li>-->
 <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
 
 </ul>
@@ -256,7 +250,6 @@ data-bs-target="#nav">
 </div>
 
 </nav>
-
 
 
 <!-- HERO -->
@@ -275,13 +268,9 @@ data-bs-target="#nav">
 
 <h1>Ashutosh Shukla</h1>
 
-<h5>
-Product Owner | Product Manager | Senior Business Analyst
-</h5>
+<h5>Product Owner | Product Manager | Senior Business Analyst</h5>
 
-<p>
-Driving banking innovation through data, compliance and Agile delivery
-</p>
+<p>Driving banking innovation through data, compliance and Agile delivery</p>
 
 <div class="badges">
 
@@ -297,11 +286,8 @@ Driving banking innovation through data, compliance and Agile delivery
 
 <br>
 
-<a href="Ashutosh_Shukla_Resume.pdf"
-class="btn btn-primary">
-
+<a href="Ashutosh_Shukla_Resume.pdf" class="btn btn-primary">
 Download Resume
-
 </a>
 
 </div>
@@ -309,7 +295,6 @@ Download Resume
 </div>
 
 </section>
-
 
 
 <!-- ABOUT -->
@@ -320,33 +305,25 @@ Download Resume
 <source src="portfolio/Video/Peak2.mp4" type="video/mp4">
 </video>
 
-    
 <div class="container">
 
 <h2>About Me</h2>
 
 <p>
-
-Professional Scrum Product Owner certified Business Analyst
-with strong experience delivering enterprise solutions
-in banking and financial services.
-
+Professional Scrum Product Owner certified Business Analyst with strong experience delivering enterprise solutions in banking and financial services.
 </p>
 
 <ul>
-
 <li>Product backlog ownership</li>
 <li>KYC / AML compliance solutions</li>
 <li>Agile product delivery</li>
 <li>Data-driven decision making</li>
 <li>Stakeholder and roadmap management</li>
-
 </ul>
 
 </div>
 
 </section>
-
 
 
 <!-- EXPERIENCE -->
@@ -356,7 +333,7 @@ in banking and financial services.
 <video autoplay muted loop playsinline>
 <source src="portfolio/Video/Peak3.mp4" type="video/mp4">
 </video>
-    
+
 <div class="container">
 
 <h2 class="text-center mb-5">Professional Experience</h2>
@@ -364,57 +341,37 @@ in banking and financial services.
 <div class="timeline">
 
 <div class="timeline-item">
-
 <h5>ANZ Banking Group</h5>
-
 <b>Business & Process Analyst</b>
-
 <p>2024 – Present</p>
 
 <ul>
-
 <li>Owned and prioritized product backlog for compliance initiatives</li>
 <li>Delivered centralized product offboarding capability</li>
 <li>Reduced operational cost by 30%</li>
-
 </ul>
-
 </div>
 
-
 <div class="timeline-item">
-
 <h5>ANZ Banking Group</h5>
-
 <b>Process & Change Specialist</b>
-
 <p>2023 – 2024</p>
 
 <ul>
-
 <li>Improved statutory reporting and automation</li>
 <li>Led finance process improvements</li>
-
 </ul>
-
 </div>
 
-
 <div class="timeline-item">
-
 <h5>Deloitte Australia</h5>
-
 <b>Consultant – Data Scientist</b>
-
 <p>2022 – 2023</p>
 
 <ul>
-
 <li>Built predictive analytics models</li>
 <li>Developed executive dashboards</li>
-
 </ul>
-
 </div>
 
 </div>
@@ -424,7 +381,6 @@ in banking and financial services.
 </section>
 
 
-
 <!-- SKILLS -->
 
 <section id="skills" class="section section-video">
@@ -432,7 +388,7 @@ in banking and financial services.
 <video autoplay muted loop playsinline>
 <source src="portfolio/Video/V1.mp4" type="video/mp4">
 </video>
-    
+
 <div class="container">
 
 <h2 class="text-center mb-5">Skills</h2>
@@ -454,7 +410,6 @@ in banking and financial services.
 </div>
 
 </section>
-
 
 
 <!-- PROJECTS -->
@@ -616,34 +571,6 @@ Click to explore source code
 
 
 
-<!-- EDUCATION -->
-<!--
-<section id="education" class="section">
-
-<div class="container">
-
-<h2 class="text-center mb-5">Education</h2>
-
-<p>
-
-Master of Information Technology – Data Analytics  
-Deakin University (High Distinction)
-
-</p>
-
-<p>
-
-Bachelor of Engineering – Computer Engineering  
-Gujarat Technology University
-
-</p>
-
-</div>
-
-</section>
-
--->
-
 <!-- CONTACT -->
 
 <section id="contact" class="section text-center">
@@ -662,9 +589,7 @@ Gujarat Technology University
 
 
 <footer>
-
 <p>© 2026 Ashutosh Shukla</p>
-
 </footer>
 
 
@@ -673,4 +598,3 @@ Gujarat Technology University
 </body>
 
 </html>
-```
