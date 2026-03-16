@@ -102,20 +102,24 @@ font-size:14px;
 
 /* PROJECTS */
 
+/* PROJECT CARD */
 .project-card{
-    position: relative;
-    overflow: hidden;
-    border-radius: 12px;
-    cursor: pointer;
+    position:relative;
+    overflow:hidden;
+    border-radius:14px;
+    cursor:pointer;
+    transition:transform 0.5s ease, box-shadow 0.5s ease;
 }
 
+/* IMAGE */
 .project-card img{
     width:100%;
     height:220px;
     object-fit:cover;
-    transition: transform 0.4s ease;
+    transition:transform 0.7s cubic-bezier(0.22,1,0.36,1);
 }
 
+/* DEFAULT OVERLAY */
 .project-overlay{
     position:absolute;
     top:0;
@@ -126,19 +130,50 @@ font-size:14px;
     align-items:center;
     justify-content:center;
     text-align:center;
+    color:white;
     font-weight:600;
     font-size:18px;
-    color:white;
     background:rgba(0,0,0,0.45);
-    transition: transform 0.4s ease, background 0.4s ease;
-}
-.project-card:hover img{
-    transform: scale(1.08);
+    transition:opacity 0.4s ease;
 }
 
+/* HOVER TEXT */
+.project-hover-text{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    color:white;
+    font-weight:600;
+    font-size:17px;
+    background:rgba(0,0,0,0.65);
+    opacity:0;
+    transition:opacity 0.4s ease;
+}
+
+/* IMAGE ZOOM */
+.project-card:hover img{
+    transform:scale(1.18);
+}
+
+/* CARD LIFT */
+.project-card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 18px 40px rgba(0,0,0,0.25);
+}
+
+/* TEXT SWITCH */
 .project-card:hover .project-overlay{
-    transform: scale(1.05);
-    background:rgba(0,0,0,0.6);
+    opacity:0;
+}
+
+.project-card:hover .project-hover-text{
+    opacity:1;
 }
 
 footer{
@@ -389,6 +424,9 @@ in banking and financial services.
 <div class="project-card">
 <img src="Images/dnn.jpeg">
 <div class="project-overlay">Deep Neural Network</div>
+    <div class="project-hover-text">
+Click to explore source code
+</div>
 </div>
 </a>
 </div>
@@ -398,6 +436,9 @@ in banking and financial services.
 <div class="project-card">
 <img src="Images/7.jpg">
 <div class="project-overlay">Stock Market Prediction</div>
+    <div class="project-hover-text">
+Click to explore source code
+</div>
 </div>
 </a>
 </div>
@@ -407,6 +448,9 @@ in banking and financial services.
 <div class="project-card">
 <img src="Images/2.jpg">
 <div class="project-overlay">Great Barrier Reef Data Analysis</div>
+    <div class="project-hover-text">
+Click to explore source code
+</div>
 </div>
 </a>
 </div>
@@ -416,6 +460,9 @@ in banking and financial services.
 <div class="project-card">
 <img src="Images/3.jpg">
 <div class="project-overlay">Python Model Training</div>
+    <div class="project-hover-text">
+Click to explore source code
+</div>
 </div>
 </a>
 </div>
@@ -425,6 +472,9 @@ in banking and financial services.
 <div class="project-card">
 <img src="Images/4.png">
 <div class="project-overlay">Franchise Management System (.NET)</div>
+    <div class="project-hover-text">
+Click to explore source code
+</div>
 </div>
 </a>
 </div>
@@ -434,6 +484,9 @@ in banking and financial services.
 <div class="project-card">
 <img src="Images/5.png">
 <div class="project-overlay">Two Person Zero Sum Game</div>
+    <div class="project-hover-text">
+Click to explore source code
+</div>
 </div>
 </a>
 </div>
@@ -443,6 +496,9 @@ in banking and financial services.
 <div class="project-card">
 <img src="Images/6.jpg">
 <div class="project-overlay">Aggregation Functions for Data Analysis</div>
+    <div class="project-hover-text">
+Click to explore source code
+</div>
 </div>
 </a>
 </div>
@@ -452,6 +508,9 @@ in banking and financial services.
 <div class="project-card">
 <img src="Images/8.webp">
 <div class="project-overlay">Bank Marketing Data Analytics</div>
+    <div class="project-hover-text">
+Click to explore source code
+</div>
 </div>
 </a>
 </div>
@@ -461,6 +520,9 @@ in banking and financial services.
 <div class="project-card">
 <img src="Images/9.webp">
 <div class="project-overlay">Numerical & Text Analysis</div>
+    <div class="project-hover-text">
+Click to explore source code
+</div>
 </div>
 </a>
 </div>
@@ -470,6 +532,9 @@ in banking and financial services.
 <div class="project-card">
 <img src="Images/10.jpg">
 <div class="project-overlay">Statistical Analysis</div>
+    <div class="project-hover-text">
+Click to explore source code
+</div>
 </div>
 </a>
 </div>
@@ -479,6 +544,9 @@ in banking and financial services.
 <div class="project-card">
 <img src="Images/11.webp">
 <div class="project-overlay">Deakin Cloud Project</div>
+    <div class="project-hover-text">
+Click to explore source code
+</div>
 </div>
 </a>
 </div>
@@ -488,6 +556,9 @@ in banking and financial services.
 <div class="project-card">
 <img src="Images/12.webp">
 <div class="project-overlay">Woven Graduate Coding Test</div>
+    <div class="project-hover-text">
+Click to explore source code
+</div>
 </div>
 </a>
 </div>
